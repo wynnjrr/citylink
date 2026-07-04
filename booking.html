@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Seat | CityLink Luxury Coaches</title>
+    <meta
+      name="description"
+      content="Reserve a CityLink Luxury Coaches seat online and download your PDF ticket."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="CityLink Luxury Coaches home">
+        <span class="brand-mark">CL</span>
+        <span>
+          <strong>CityLink</strong>
+          <small>Luxury Coaches</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About us</a>
+        <a href="index.html#routes">Routes & Fares</a>
+        <a href="index.html#loyalty">Loyalty</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="booking-hero section-band">
+        <div class="booking-intro">
+          <p class="eyebrow">CityLink online booking</p>
+          <h1>Reserve your seat</h1>
+          <p>
+            Pick a route, choose your departure, add passenger details, and receive a downloadable PDF ticket immediately.
+          </p>
+        </div>
+        <div class="booking-picture-board" aria-label="CityLink travel picture frames">
+          <figure class="photo-frame frame-coach"><span>Premium coach comfort</span></figure>
+          <figure class="photo-frame frame-road"><span>Zimbabwe route network</span></figure>
+          <figure class="photo-frame frame-terminal"><span>Easy boarding support</span></figure>
+        </div>
+      </section>
+
+      <section class="booking-panel section-band" id="booking">
+        <div class="booking-shell reveal">
+          <form class="booking-form glass" id="bookingForm">
+            <div class="form-grid">
+              <label>
+                From
+                <select name="from" id="fromSelect" required></select>
+              </label>
+              <label>
+                To
+                <select name="to" id="toSelect" required></select>
+              </label>
+              <label>
+                Travel Date
+                <input name="date" id="dateInput" type="date" required />
+              </label>
+              <label>
+                Departure
+                <select name="time" id="timeSelect" required></select>
+              </label>
+              <label>
+                Passengers
+                <input name="passengers" type="number" min="1" max="8" value="1" required />
+              </label>
+              <label>
+                Discount
+                <select name="discount">
+                  <option value="none">No discount</option>
+                  <option value="senior">Senior citizen</option>
+                  <option value="minor">Minor</option>
+                  <option value="rtg">RTG staff</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-grid passenger-grid">
+              <label>
+                Passenger Name
+                <input name="passengerName" type="text" placeholder="Full name" required />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" placeholder="name@example.com" required />
+              </label>
+              <label>
+                Phone Number
+                <input name="phone" type="tel" placeholder="0776 999 222" required />
+              </label>
+              <label>
+                Pickup Note
+                <input name="pickupNote" type="text" placeholder="Optional note" />
+              </label>
+            </div>
+            <button class="button primary wide" type="submit">Reserve Seat</button>
+            <div class="booking-confirmation" id="bookingConfirmation" hidden>
+              <span>Seat Reserved</span>
+              <strong id="confirmationReference">Reference CL-000000</strong>
+              <p id="confirmationMessage">Your CityLink ticket is ready.</p>
+              <a class="button ghost" id="ticketDownload" href="#" download>Download PDF Ticket</a>
+            </div>
+          </form>
+          <aside class="trip-summary glass" aria-live="polite">
+            <span class="summary-label">Live Trip Summary</span>
+            <h3 id="summaryRoute">Harare to Bulawayo</h3>
+            <dl>
+              <div><dt>Departure</dt><dd id="summaryTime">07:00</dd></div>
+              <div><dt>Drop-off</dt><dd id="summaryDropoff">Rainbow Towers Bulawayo</dd></div>
+              <div><dt>Fare</dt><dd id="summaryFare">$35</dd></div>
+              <div><dt>Total</dt><dd id="summaryTotal">$35</dd></div>
+            </dl>
+            <p id="bookingNotice">Senior citizen discounts are issued at the office on presentation of a valid ID.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>CityLink Luxury Coaches</strong>
+        <p>Reliable and comfortable bus transportation services across Zimbabwe.</p>
+      </div>
+      <div>
+        <strong>Need help?</strong>
+        <p>Call 0776 999 222 or 0776 999 666</p>
+      </div>
+    </footer>
+
+    <output class="toast" id="toast" aria-live="polite"></output>
+    <script src="app.js"></script>
+  </body>
+</html>

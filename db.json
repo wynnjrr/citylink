@@ -1,0 +1,23 @@
+{
+  "bookings": [
+    {
+      "id": "CL-33E835",
+      "status": "Reserved",
+      "from": "Harare",
+      "to": "Bulawayo",
+      "date": "2026-06-21",
+      "time": "07:00",
+      "passengers": 1,
+      "passengerName": "wynn chimpaka",
+      "email": "chimpaka89@gmail.com",
+      "phone": "078275807",
+      "discount": "none",
+      "pickupNote": "",
+      "farePerSeat": 35,
+      "total": 35,
+      "dropoff": "Rainbow Towers Bulawayo",
+      "createdAt": "2026-06-22T08:55:20.993Z"
+    }
+  ],
+  "messages": []
+}
